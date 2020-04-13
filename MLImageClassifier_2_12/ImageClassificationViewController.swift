@@ -17,7 +17,7 @@ class ImageClassificationViewController: UIViewController {
     
     lazy var classificationRequest: VNCoreMLRequest = {
         do {
-            let model = try VNCoreMLModel(for: AnimalsClassifier_1().model)
+            let model = try VNCoreMLModel(for: AnimalsClassifier_2().model)
             
             let request = VNCoreMLRequest(model: model, completionHandler: { [weak self] request, error in
                 self?.processClassifications(for: request, error: error)
